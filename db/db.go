@@ -11,7 +11,7 @@ var DB *sql.DB
 
 func Connect() {
 	var err error
-	dsn := "root:Villabalter1@tcp(127.0.0.1:3306)/task_manager?parseTime=true"
+	dsn := "root:Villabalter1@tcp(127.0.0.1:3306)/task_manager?parseTime=true&loc=Europe%2FMadrid"
 	DB, err = sql.Open("mysql", dsn)
 	if err != nil {
 		log.Fatal("No se pudo conectar a la base de datos:", err)
